@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #a6f4f3;
+      margin: 10px;
+      padding: 20px;
+      justify-content: center;
+      align-content: center;
+    }
+    .navbar {
+      background-color: #2c3e50;
+      padding: 15px;
+      text-align: center;
+    }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 16px;
+    }
+    .navbar a:hover {
+      color: #f39c12;
+    }
+    .header {
+      background-color: #3498db;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .header h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+    .header p {
+      font-size: 18px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+      align-items: center;
+
+    }
+    .about {
+      background-color: white;
+      width: 600px;
+      padding: 30px;
+      align-items: center;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border-left: 5px solid #3498db;
+      align-items: center;
+    }
+    .about h2 {
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+    .about p {
+      color: #555;
+      line-height: 1.7;
+    }
+    .projects {
+      background-color: white;
+      width: 600px;
+      padding: 30px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border-left: 5px solid #9b59b6;
+
+    }
+    .projects h2 {
+      color: #2c3e50;
+      margin-bottom: 15px;
+    }
+    .project-item {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin-bottom: 12px;
+      border-radius: 5px;
+      width: 300px;
+      align-items: center;
+    }
+    .project-item h3 {
+      color: #3498db;
+      margin-bottom: 6px;
+    }
+    .project-item p {
+      color: #666;
+      font-size: 14px;
+    }
+    .upload-section {
+     width: 300px;
+      padding: 12px 16px;
+      border: none;
+      border-radius: 8px;
+      align-items: center;
+      background: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      font-size: 16px;
+      transition: all 0.3s ease;
+      
+
+    }
+    .upload-section h2 {
+      color: #2c3e50;
+      margin-bottom: 15px;
+    }
+    .upload-section label {
+      display: block;
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 5px;
+      margin-top: 12px;
+      align-content: center;
+    }
+    .upload-section input[type="text"],
+    .upload-section select,
+    .upload-section textarea {
+      width: 100%;
+      padding: 9px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+    .upload-section input[type="file"] {
+      margin-top: 6px;
+      font-size: 13px;
+    }
+    .upload-section button {
+      margin-top: 15px;
+      background-color: #3498db;
+      color: rgb(82, 237, 124);
+      padding: 10px 25px;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .upload-section button:hover {
+      background-color: #2980b9;
+    }
+    .submissions-section {
+      background-color: white;
+      padding: 30px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border-left: 5px solid #e74c3c;
+    }
+    .submissions-section h2 {
+      color: #2c3e50;
+      margin-bottom: 15px;
+    }
+    .sub-item {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      padding: 12px 15px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .sub-info {
+      font-size: 14px;
+      color: #444;
+    }
+    .sub-info span {
+      display: block;
+      font-size: 12px;
+      color: #999;
+      margin-top: 3px;
+    }
+    .unsubmit-btn {
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 4px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+    .unsubmit-btn:hover {
+      background-color: #c0392b;
+    }
+    .no-submissions {
+      color: #aaa;
+      font-size: 14px;
+      text-align: center;
+      padding: 20px 0;
+    }
+    .footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      width: 640px;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 8px;
+      font-size: 13px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#upload">Submit Work</a>
+    <a href="#submissions">My Submissions</a>
+  </div>
+  <div class="header">
+    <h1>My Portfolio</h1>
+    <p>1st Year Computer Science Student</p>
+  </div>
+  <div class="container">
+    <div class="about" id="about">
+      <h2>About Me</h2>
+      <p>
+        Hi! My name is John Myr Fabi. I am a first year Computer Science student.
+        I am just starting to learn about programming and web development.
+      </p>
+    </div>
+    <div class="projects" id="projects">
+      <h2>My Projects</h2>
+
+      <div class="project-item">
+        <h3>This Portfolio Website</h3>
+        <p>I made this using basic HTML and CSS. It was my first time making a multi-section webpage.</p>
+      </div>
+    <div class="upload-section" id="upload">
+      <h2>Submit Work</h2>
+
+      <label>Type of Submission:</label>
+      <select id="sub-type">
+        <option value="quiz">Quiz</option>
+        <option value="lab">Lab Work</option>
+        <option value="exam">Major Exam</option>
+      </select>
+
+      <label>Title:</label>
+      <input type="text" id="sub-title" placeholder="e.g. Quiz 1 - Variables"/>
+
+      <label>Notes (optional):</label>
+      <textarea id="sub-notes" rows="3" placeholder="Write any notes here..."></textarea>
+
+      <label>Upload File:</label>
+      <input type="file" id="sub-file"/>
+
+      <label>Proof Image:</label>
+      <input type="file" id="sub-img" accept="image/*"/>
+
+      <br/>
+      <button onclick="addSubmission()">Submit</button>
+    </div>
+    <div class="submissions-section" id="submissions">
+      <h2>My Submissions</h2>
+      <div id="sub-list">
+        <p class="no-submissions">No submissions yet.</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <p>© 2025 My Portfolio &nbsp;|&nbsp; CS 1st Year &nbsp;|&nbsp; Midterm Project</p>
+  </div>
+  <script>
+    var submissions = [];
+
+    function addSubmission() {
+      var type = document.getElementById("sub-type").value;
+      var title = document.getElementById("sub-title").value;
+      var notes = document.getElementById("sub-notes").value;
+      var imgInput = document.getElementById("sub-img");
+      if (title == "") {
+        showMessage("Please enter a title!");
+        return;
+      }
+      if (imgInput.files.length == 0) {
+        showMessage("Please upload a proof image!");
+        return;
+      }
+      var today = new Date();
+      var dateStr = today.toLocaleDateString();
+      submissions.push({
+        type: type,
+        title: title,
+        notes: notes,
+        date: dateStr
+      });
+      document.getElementById("sub-title").value = "";
+      document.getElementById("sub-notes").value = "";
+      document.getElementById("sub-file").value = "";
+      document.getElementById("sub-img").value = "";
+      displaySubmissions();
+      showMessage("Submitted successfully!");
+    }
+
+    function removeSubmission(index) {
+      submissions.splice(index, 1);
+      displaySubmissions();
+      showMessage("Submission removed.");
+    }
+    function displaySubmissions() {
+      var list = document.getElementById("sub-list");
+      if (submissions.length == 0) {
+        list.innerHTML = '<p class="no-submissions">No submissions yet.</p>';
+        return;
+      }
+      var html = "";
+      for (var i = 0; i < submissions.length; i++) {
+        var s = submissions[i];
+        html += '<div class="sub-item">';
+        html += '  <div class="sub-info">';
+        html += '    <b>' + s.title + '</b>';
+        html += '    <span>' + s.type + ' &nbsp;|&nbsp; ' + s.date + '</span>';
+        if (s.notes != "") {
+          html += '    <span>Note: ' + s.notes + '</span>';
+        }
+        html += '  </div>';
+        html += '  <button class="unsubmit-btn" onclick="removeSubmission(' + i + ')">Unsubmit</button>';
+        html += '</div>';
+      }
+      list.innerHTML = html;
+    }
+    function showMessage(msg) {
+      var box = document.getElementById("message-box");
+      box.textContent = msg;
+      box.style.display = "block";
+
+      setTimeout(function() {
+        box.style.display = "none";
+      }, 2500);
+    }
+  </script>
+
+</body>
+</html>
